@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background: url('images/bg-arcade.jpg') center no-repeat fixed;
+    background-size: cover;
+}
+
+ul{
+    list-style:none;
+    display: block;
+}
+a{
+    text-decoration: none;
+    color:black
+}
+.container{
+    max-width:1400px;
+    width:95%;
+    background: white;
+    margin: 0 auto;
+}
+.header label span{
+    height: 1px;
+    background: black;
+    margin: 5px;
+    width: 25px;
+    display: block;
+}
+.header label{
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+    float: right;
+    margin: 5px 5px 5px 0;
+}
+.header input{
+    display: none;
+}
+
+.header input:checked ~ ul{display: block;}
+
+.header input:checked ~ label span:first-child{background-color: red;
+transform: translateY(5px);}
+
+.header input:checked ~ label span:last-child{display: block;}
+
+.header .logo{
+    float: left;
+    display: block;
+    width: 80%;
+}
+
+.header::after{
+content: "";
+display: table;
+clear: both;
+}
