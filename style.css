@@ -1,53 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
-    margin:0;
+    margin: 10px;
     padding:0;
     box-sizing: border-box;
 }
 body{
+    background: url('../images/bg-arcade.jpg') center no-repeat fixed;
+    background-size: cover;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
     background: url('images/bg-arcade.jpg') center no-repeat fixed;
     background-size: cover;
 }
 
 ul{
     list-style:none;
-    display: block;
+    display: none;
 }
 a{
     text-decoration: none;
     color:black
 }
 .container{
-    max-width:1400px;
-    width:95%;
+    max-width: 1000px;
+    width:100%;
     background: white;
     margin: 0 auto;
+    border-radius: 10px;
 }
 .header label span{
-    height: 1px;
+    height: 3px;
     background: black;
-    margin: 5px;
-    width: 25px;
+    margin: 3px;
+    width: 20px;
     display: block;
+    border-radius: 5px;
 }
 .header label{
-    border: 1px solid black;
+    border-bottom: 1px solid rgb(48, 47, 47);
     border-radius: 5px;
     display: block;
     float: right;
     margin: 5px 5px 5px 0;
 }
+
+.header{
+    border-bottom: 1px solid gray;
+}
+
 .header input{
-    display: none;
+    display:none;
 }
 
 .header input:checked ~ ul{display: block;}
 
-.header input:checked ~ label span:first-child{background-color: red;
-transform: translateY(5px);}
+.header input:checked ~ label span:first-child{
+transform: translateY(6.5px) rotate(45deg);}
 
-.header input:checked ~ label span:last-child{display: block;}
+.header input:checked ~ label span:last-child{
+    transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.header input:checked ~ label span:nth-child(2){
+opacity: 0;
+}
 
 .header .logo{
+    font-weight: bold;
+    margin-top: 5px;
     float: left;
     display: block;
     width: 80%;
@@ -57,4 +81,42 @@ transform: translateY(5px);}
 content: "";
 display: table;
 clear: both;
+}
+
+
+img{
+    width: 97%;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 97%;
+    margin: 1,5%;
+}
+
+.box a{
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: blueviolet;
+}
+
+.column a{
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: rgb(215, 208, 208);
+}
+
+.footer{
+    font-size: 11px;
+    line-height: 1.7;
 }
